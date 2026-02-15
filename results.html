@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Results | LocalPath Jobs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="results-page">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="LocalPath Jobs logo" class="logo" />
+      <div>
+        <strong>LocalPath Jobs</strong>
+        <span>Smart local career matching</span>
+      </div>
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-outline small" href="profile.html">Edit Profile</a>
+      <button id="logoutBtn" class="btn btn-outline small">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="resultSummary" class="summary-box"></section>
+    <section id="jobsContainer" class="jobs-grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Showing ranked opportunities from predefined demo jobs.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

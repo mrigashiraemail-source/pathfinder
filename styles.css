@@ -1,0 +1,279 @@
+:root {
+  --primary: #1b74e4;
+  --primary-dark: #0f5fc4;
+  --bg: #eef3fb;
+  --text: #172033;
+  --muted: #5a6780;
+  --card: #ffffff;
+  --border: #dce4f2;
+  --shadow: 0 14px 35px rgba(24, 39, 75, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: linear-gradient(180deg, #f7faff 0%, var(--bg) 60%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: inherit; }
+
+h1, h2, h3 { margin-top: 0; }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 5%;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+}
+
+.brand strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.brand span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #2a3a58;
+}
+
+.active-link {
+  color: var(--primary);
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), #4a95ef);
+  color: #fff !important;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(27, 116, 228, 0.25);
+}
+
+.btn:hover { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); }
+
+.btn-outline {
+  background: #fff;
+  color: var(--primary) !important;
+  border: 1px solid var(--primary);
+  box-shadow: none;
+}
+
+.small {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.hero {
+  color: #fff;
+  padding: 3rem 5%;
+  background: radial-gradient(circle at 15% 10%, #5ca6ff, #1b74e4 48%, #0e4ea5 100%);
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.hero p {
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+main {
+  width: min(1200px, 96%);
+  margin: 1.2rem auto;
+  flex: 1;
+}
+
+.workings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.card,
+.auth-container,
+.profile-card,
+.feed-card,
+.summary-box,
+.job-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.full-width { grid-column: 1 / -1; }
+
+.auth-main {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  padding: 1.2rem;
+}
+
+.auth-container {
+  width: min(460px, 96vw);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #d0d9ec;
+  border-radius: 9px;
+  cursor: pointer;
+  background: #f6f8fc;
+  font-weight: 600;
+}
+
+.tabs button.active {
+  background: #e8f0fe;
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.auth-form { display: none; }
+.auth-form.active { display: block; }
+
+label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.68rem;
+  border-radius: 9px;
+  border: 1px solid #cfd9ed;
+  margin-top: 0.35rem;
+  background: #fbfdff;
+}
+
+.message {
+  min-height: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: var(--muted);
+}
+
+.fb-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1rem;
+}
+
+.welcome {
+  color: var(--muted);
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.match {
+  display: inline-block;
+  margin: 0.4rem 0;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: #e9f2ff;
+  color: #0a4ea8;
+  font-weight: 800;
+}
+
+.job-card iframe {
+  width: 100%;
+  height: 170px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+  text-align: center;
+  padding: 0.8rem 1rem;
+  margin-top: auto;
+}
+
+@media (max-width: 860px) {
+  .site-header,
+  .site-nav,
+  .header-actions {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .fb-layout {
+    grid-template-columns: 1fr;
+  }
+}

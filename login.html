@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | LocalPath Jobs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="auth-page">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="LocalPath Jobs logo" class="logo" />
+      <div>
+        <strong>LocalPath Jobs</strong>
+        <span>Smart local career matching</span>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a class="active-link" href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-container">
+      <h1>Welcome back</h1>
+      <p>Log in to continue, or create your account.</p>
+
+      <div class="tabs">
+        <button id="loginTab" class="active">Login</button>
+        <button id="signupTab">Sign Up</button>
+      </div>
+
+      <form id="loginForm" class="auth-form active">
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+        <label>Password
+          <input type="password" name="password" required />
+        </label>
+        <button class="btn" type="submit">Login</button>
+      </form>
+
+      <form id="signupForm" class="auth-form">
+        <label>Full Name
+          <input type="text" name="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+        <label>Password
+          <input type="password" name="password" minlength="6" required />
+        </label>
+        <button class="btn" type="submit">Create Account</button>
+      </form>
+
+      <p id="authMessage" class="message"></p>
+      <a class="home-link" href="index.html">← Back to landing page</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Secure login stored locally in your browser for this demo.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

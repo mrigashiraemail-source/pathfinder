@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | LocalPath Jobs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="profile-page">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="LocalPath Jobs logo" class="logo" />
+      <div>
+        <strong>LocalPath Jobs</strong>
+        <span>Smart local career matching</span>
+      </div>
+    </a>
+    <div class="header-actions">
+      <span id="welcomeUser" class="welcome"></span>
+      <button id="logoutBtn" class="btn btn-outline small">Logout</button>
+    </div>
+  </header>
+
+  <main class="fb-layout">
+    <aside class="fb-sidebar">
+      <div class="profile-card">
+        <h2 id="profileName">Your Profile</h2>
+        <p>Update your details to get better local opportunities.</p>
+      </div>
+      <div class="profile-card">
+        <h3>Quick Tips</h3>
+        <ul>
+          <li>Use role-specific skills.</li>
+          <li>Add hobbies that show strengths.</li>
+          <li>Set your preferred locality clearly.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="fb-feed">
+      <article class="feed-card">
+        <h2>Professional Details</h2>
+        <form id="profileForm">
+          <label>Highest Qualification
+            <input type="text" name="qualification" placeholder="e.g. B.Tech Computer Science" required />
+          </label>
+
+          <label>Skills (comma separated)
+            <textarea name="skills" rows="3" placeholder="e.g. JavaScript, Customer Service, AutoCAD" required></textarea>
+          </label>
+
+          <label>Hobbies (comma separated)
+            <textarea name="hobbies" rows="3" placeholder="e.g. Blogging, Gaming, Teaching" required></textarea>
+          </label>
+
+          <label>Your Locality / Preferred Area
+            <input type="text" name="locality" placeholder="e.g. Bengaluru" required />
+          </label>
+
+          <button class="btn" type="submit">Save Profile & Find Jobs</button>
+        </form>
+        <p id="profileMessage" class="message"></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Profile insights help us prioritize your best-matching local roles.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
