@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | LocalPath Jobs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="profile-page">
+  <header class="fb-header">
+    <h1>LocalPath Jobs</h1>
+    <div>
+      <span id="welcomeUser"></span>
+      <button id="logoutBtn" class="btn btn-outline small">Logout</button>
+    </div>
+  </header>
+
+  <main class="fb-layout">
+    <aside class="fb-sidebar">
+      <div class="profile-card">
+        <h2 id="profileName">Your Profile</h2>
+        <p>Keep your details updated to get better job matches.</p>
+      </div>
+      <div class="profile-card">
+        <h3>Quick Tips</h3>
+        <ul>
+          <li>Add multiple skills</li>
+          <li>Include practical hobbies</li>
+          <li>Update your locality for nearby jobs</li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="fb-feed">
+      <article class="feed-card">
+        <h2>Professional Details</h2>
+        <form id="profileForm">
+          <label>Highest Qualification
+            <input type="text" name="qualification" placeholder="e.g. B.Tech Computer Science" required />
+          </label>
+
+          <label>Skills (comma separated)
+            <textarea name="skills" rows="3" placeholder="e.g. JavaScript, Customer Service, AutoCAD" required></textarea>
+          </label>
+
+          <label>Hobbies (comma separated)
+            <textarea name="hobbies" rows="3" placeholder="e.g. Blogging, Gaming, Teaching" required></textarea>
+          </label>
+
+          <label>Your Locality / Preferred Area
+            <input type="text" name="locality" placeholder="e.g. Bengaluru" required />
+          </label>
+
+          <button class="btn" type="submit">Save Profile & Find Jobs</button>
+        </form>
+        <p id="profileMessage" class="message"></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
